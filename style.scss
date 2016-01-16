@@ -1,0 +1,26 @@
+// Colors
+$black: #000;
+$white: #fff;
+
+// Styles
+body {
+    background: $white;
+    color: $black;
+}
+
+.flex {
+    display: flex;
+    min-height: 80vh;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    .logo {
+        display: inline-block;
+    }
+    
+    .nav {
+        margin-top: 20px;
+    }
+}

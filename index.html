@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="portfolio">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    
+    <script src="js/angular.js"></script>
+    <script src="js/script.js"></script>
+
+    <title>Scratcpad</title>
+</head>
+
+<body ng-controller="portfolioController" ng-init="selected = 'about'">
+   <header>
+       <div class="container">
+           <h1 class="logo">Waqar <small>Hocain</small></h1>
+               <ul class="nav nav-pills navbar navbar-right">
+                   <li><a href="" ng-click="select('about')">About</a></li>
+                   <li><a href="" ng-click="select('work')">Work</a></li>
+                   <li><a href="" ng-click="select('contact')">Contact</a></li>
+               </ul>
+       </div>
+   </header>
+   
+   <main>
+       <section class="about flex" ng-show="selected === 'about'">
+           <div class="container">
+               <h1 class="text-center">I'm <a href="">Waqar Hocain</a> &amp; I create <a href="">websites</a>/<a href="">apps</a>.</h1>
+           </div>
+       </section>
+       
+       <section class="work flex" ng-show="selected === 'work'">
+           <div class="container">
+               <p>These are some of the websites/apps, I've created || I'm working on.</p>
+               <ul class="showcase">
+                   <li>
+                       <h3><a href="">Simply Weather</a></h3>
+                       <p>A small app for showing weather condition</p>
+                   </li>
+                   <li>
+                       <h3><a href="">Pomodoro Clock</a></h3>
+                       <p>A pomodoro timer, just a pomodoro.</p>
+                   </li>
+                   <li>
+                       <h3><a href="">Twitch Channel API</a></h3>
+                       <p>Shows which channel are online on twitch.</p>
+                   </li>
+                   <li>
+                       <h3><a href="">FreeCodeCamp News feed</a></h3>
+                       <p>As the name suggests, but a little bit stylish.</p>
+                   </li>
+                   <li>
+                       <h3><a href="">A JS hex-clock</a></h3>
+                       <p>A hex clock, which changes the page color according to time.</p>
+                   </li>
+               </ul>
+           </div>
+       </section>
+       
+       <section class="contact flex" ng-show="selected === 'contact'">
+           <div class="container">
+               <form action="">
+                   <label for="name">Name</label>
+                   <input type="text" id="name" placeholder="Your Name">
+                   <br>
+                   
+                   <label for="email">Email</label>
+                   <input type="email" id="email" placeholder="Your Email">
+                   <br>
+                   
+                   <label for="message">Message</label>
+                   <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+                   <br>
+                   
+                   <button class="submit">Submit</button>
+               </form>
+           </div>
+       </section>
+       
+   </main>
+   
+    
+</body>
+</html>
