@@ -5,78 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
     <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css" />
     
     <script src="js/angular.js"></script>
     <script src="js/script.js"></script>
 
-    <title>Scratcpad</title>
+    <title>Waqar Hocain's</title>
 </head>
 
 <body ng-controller="portfolioController" ng-init="selected = 'about'">
    <header>
        <div class="container">
-           <h1 class="logo">Waqar <small>Hocain</small></h1>
-               <ul class="nav nav-pills navbar navbar-right">
-                   <li><a href="" ng-click="select('about')">About</a></li>
-                   <li><a href="" ng-click="select('work')">Work</a></li>
-                   <li><a href="" ng-click="select('contact')">Contact</a></li>
+          
+           <nav class="navbar">
+               <div class="navbar-header">
+                   <a href="/" class="navbar-brand logo">Waqar <small>Hocain</small></a>
+               </div>
+               <ul class="nav nav-pills navbar-right">
+                   <li ng-class="{active:selected === 'about'}"><a href="" ng-click="select('about')">About</a></li>
+                   <li ng-class="{active:selected === 'work'}"><a href="" ng-click="select('work')">Work</a></li>
+                   <li ng-class="{active:selected === 'contact'}"><a href="" ng-click="select('contact')">Contact</a></li>
                </ul>
+           </nav>
+           
        </div>
    </header>
    
    <main>
-       <section class="about flex" ng-show="selected === 'about'">
+      
+       <section class="about flex jumbotron" ng-show="selected === 'about'">
            <div class="container">
-               <h1 class="text-center">I'm <a href="">Waqar Hocain</a> &amp; I create <a href="">websites</a>/<a href="">apps</a>.</h1>
+              
+               <h1 class="text-center">I'm <a href="https://twitter.com/waqarHocain" target="_blank">Waqar Hocain</a> &amp; I create <a href="" ng-click="select('work')">websites</a> / <a href="" ng-click="select('work')">apps</a>.</h1>
+               <ul class="social">
+                   <li><a href="http://codepen.io/waqarHocain/" target="_blank"><i class="fa fa-codepen"></i></a></li>
+                   <li><a href="https://twitter.com/waqarHocain" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                   <li><a href="https://www.facebook.com/waqar.mastan" target="_blank"><i class="fa fa-facebook"></i></a></li>
+               </ul>
            </div>
        </section>
        
-       <section class="work flex" ng-show="selected === 'work'">
-           <div class="container">
+       <section class="work jumbotron" ng-show="selected === 'work'">
+           <div class="container relative">
+               <a href="" class="back btn btn-primary" ng-click="select('about')">BACK</a>
                <p>These are some of the websites/apps, I've created || I'm working on.</p>
                <ul class="showcase">
                    <li>
-                       <h3><a href="">Simply Weather</a></h3>
+                       <h3><a href="http://codepen.io/waqarHocain/full/OVEVVO/" target="_blank">Simply Weather</a></h3>
                        <p>A small app for showing weather condition</p>
                    </li>
+                   
                    <li>
-                       <h3><a href="">Pomodoro Clock</a></h3>
+                       <h3><a href="http://codepen.io/waqarHocain/full/MaddWY/" target="_blank">Pomodoro Clock</a></h3>
                        <p>A pomodoro timer, just a pomodoro.</p>
                    </li>
+                   
                    <li>
-                       <h3><a href="">Twitch Channel API</a></h3>
-                       <p>Shows which channel are online on twitch.</p>
+                       <h3><a href="http://codepen.io/waqarHocain/full/vNweGa/" target="_blank">A Random Quote Machine</a></h3>
+                       <p>An app to show some random quotes from my quote collection.</p>
                    </li>
+                   
                    <li>
-                       <h3><a href="">FreeCodeCamp News feed</a></h3>
-                       <p>As the name suggests, but a little bit stylish.</p>
+                       <h3><a href="http://codepen.io/waqarHocain/full/eNKjXR/" target="_blank">Wikipedia Viewer</a></h3>
+                       <p>A simple application to search wikipedia and view the results a little bit cleaner.</p>
                    </li>
+                   
                    <li>
-                       <h3><a href="">A JS hex-clock</a></h3>
+                       <h3><a href="http://codepen.io/waqarHocain/full/bcGuD/" target="_blank">A JS hex-clock</a></h3>
                        <p>A hex clock, which changes the page color according to time.</p>
                    </li>
                </ul>
            </div>
        </section>
        
-       <section class="contact flex" ng-show="selected === 'contact'">
-           <div class="container">
-               <form action="">
-                   <label for="name">Name</label>
-                   <input type="text" id="name" placeholder="Your Name">
-                   <br>
+       <section class="contact jumbotron" ng-show="selected === 'contact'">
+           <div class="container relative">
+              <a href="" class="back btn btn-primary" ng-click="select('about')">BACK</a>
+              
+<!--
+               <form action="" role="form">
+                  <div class="form-group">
+                     <label for="name">Name</label>
+                     <input type="text" class="form-control" id="name" placeholder="Your Name">
+                  </div>
+                  
+                  <div class="form-group">
+                         <label for="email">Email</label>
+                         <input type="email" class="form-control" id="email" placeholder="Your Email">
+                  </div>
+                  
+                  <div class="form-group">
+                       <label for="message">Message</label>
+                       <textarea name="" class="form-control" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+                  </div>
                    
-                   <label for="email">Email</label>
-                   <input type="email" id="email" placeholder="Your Email">
-                   <br>
-                   
-                   <label for="message">Message</label>
-                   <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
-                   <br>
-                   
-                   <button class="submit">Submit</button>
+                   <button type="submit" class="btn btn-default submit">Submit</button>
                </form>
+-->
+            <div id="wufoo-z17v49qz177py9q">
+            Fill out my <a href="https://waqarhocain.wufoo.com/forms/z17v49qz177py9q">online form</a>.
+            </div>
+            <script type="text/javascript">var z17v49qz177py9q;(function(d, t) {
+            var s = d.createElement(t), options = {
+            'userName':'waqarhocain',
+            'formHash':'z17v49qz177py9q',
+            'autoResize':true,
+            'height':'500',
+            'async':true,
+            'host':'wufoo.com',
+            'header':'show',
+            'ssl':true};
+            s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+            s.onload = s.onreadystatechange = function() {
+            var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+            try { z17v49qz177py9q = new WufooForm();z17v49qz177py9q.initialize(options);z17v49qz177py9q.display(); } catch (e) {}};
+            var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+            })(document, 'script');</script>
+
            </div>
        </section>
        

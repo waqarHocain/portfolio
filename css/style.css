@@ -1,10 +1,4 @@
 /* line 6, ../style.scss */
-body {
-  background: #fff;
-  color: #000;
-}
-
-/* line 11, ../style.scss */
 .flex {
   display: flex;
   min-height: 80vh;
@@ -12,11 +6,84 @@ body {
   justify-content: center;
 }
 
-/* line 19, ../style.scss */
-header .logo {
-  display: inline-block;
+/* line 12, ../style.scss */
+.relative {
+  position: relative;
 }
-/* line 23, ../style.scss */
+
+/* line 15, ../style.scss */
+.back {
+  position: absolute;
+  top: -40px;
+  right: 40px;
+  font-weight: bold;
+}
+
+/* line 21, ../style.scss */
+.work, .contact {
+  padding: 60px 0;
+}
+
+/* line 24, ../style.scss */
+.jumbotron {
+  background: #fff;
+}
+
+/* line 28, ../style.scss */
+body {
+  background: #fff;
+  color: #000;
+}
+
+/* line 34, ../style.scss */
+header .logo {
+  font-size: 36px;
+}
+@media screen and (max-width: 767px) {
+  /* line 34, ../style.scss */
+  header .logo {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+}
+/* line 44, ../style.scss */
 header .nav {
+  margin-top: 10px;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  /* line 48, ../style.scss */
+  header .nav li {
+    float: none;
+    display: inline-block;
+  }
+}
+
+/* line 59, ../style.scss */
+.about h1 {
+  font-size: 48px;
+}
+
+/* line 63, ../style.scss */
+.social {
+  list-style-type: none;
+  text-align: center;
   margin-top: 20px;
+}
+/* line 67, ../style.scss */
+.social li {
+  display: inline-block;
+  text-align: center;
+}
+/* line 70, ../style.scss */
+.social li a {
+  font-size: 22px;
+  margin-right: 20px;
+}
+
+/* line 78, ../style.scss */
+form {
+  max-width: 650px;
+  margin: 0 auto;
 }

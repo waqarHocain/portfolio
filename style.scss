@@ -2,25 +2,80 @@
 $black: #000;
 $white: #fff;
 
-// Styles
-body {
-    background: $white;
-    color: $black;
-}
-
+// Important Classes
 .flex {
     display: flex;
     min-height: 80vh;
     align-items: center;
     justify-content: center;
 }
+.relative {
+    position: relative;
+}
+.back {
+    position: absolute;
+    top: -40px;
+    right: 40px;
+    font-weight: bold;
+}
+.work, .contact {
+    padding: 60px 0;
+}
+.jumbotron {
+    background: $white;
+}
+// Styles
+body {
+    background: $white;
+    color: $black;
+}
 
 header {
     .logo {
-        display: inline-block;
+        font-size: 36px;
+        
+        @media screen and (max-width: 767px) {
+            float: none;
+            display: block;
+            text-align: center;
+        }
     }
     
     .nav {
-        margin-top: 20px;
+        margin-top: 10px;
+        text-align: center;
+        
+        li {
+            @media screen and (max-width: 767px) {
+                float:  none;
+                display: inline-block;
+            }
+        } // li
     }
+}
+
+// about section
+.about {
+    h1 {
+        font-size: 48px;
+    }
+}
+.social {
+    list-style-type: none;
+    text-align: center;
+    margin-top: 20px;
+    li {
+        display: inline-block;
+        text-align: center;
+        a {
+            font-size: 22px;
+            margin-right: 20px;
+        }
+    }
+}
+
+// contact section
+form {
+    max-width: 650px;
+    margin: 0 auto;
 }
