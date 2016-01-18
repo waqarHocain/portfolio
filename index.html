@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css" />
     
     <script src="js/angular.js"></script>
@@ -15,14 +14,28 @@
 </head>
 
 <body ng-controller="portfolioController" ng-init="selected = 'about'">
+  
+  <svg style="display:none;">
+	<defs>
+            <path fill="#444" id="icon-codepen" d="M3.375 18.266l9.422 6.281v-5.609l-5.219-3.484zM2.406 16.016l3.016-2.016-3.016-2.016v4.031zM15.203 24.547l9.422-6.281-4.203-2.812-5.219 3.484v5.609zM14 16.844l4.25-2.844-4.25-2.844-4.25 2.844zM7.578 12.547l5.219-3.484v-5.609l-9.422 6.281zM22.578 14l3.016 2.016v-4.031zM20.422 12.547l4.203-2.812-9.422-6.281v5.609zM28 9.734v8.531q0 0.641-0.531 1l-12.797 8.531q-0.328 0.203-0.672 0.203t-0.672-0.203l-12.797-8.531q-0.531-0.359-0.531-1v-8.531q0-0.641 0.531-1l12.797-8.531q0.328-0.203 0.672-0.203t0.672 0.203l12.797 8.531q0.531 0.359 0.531 1z"></path>
+            
+			<path id="icon-facebook", d="M14.984 0.187v4.125h-2.453q-1.344 0-1.813 0.562t-0.469 1.687v2.953h4.578l-0.609 4.625h-3.969v11.859h-4.781v-11.859h-3.984v-4.625h3.984v-3.406q0-2.906 1.625-4.508t4.328-1.602q2.297 0 3.563 0.187z"></path>
+
+			<path id="icon-twitter", d="M25.312 6.375q-1.047 1.531-2.531 2.609 0.016 0.219 0.016 0.656 0 2.031-0.594 4.055t-1.805 3.883-2.883 3.289-4.031 2.281-5.047 0.852q-4.234 0-7.75-2.266 0.547 0.063 1.219 0.063 3.516 0 6.266-2.156-1.641-0.031-2.938-1.008t-1.781-2.492q0.516 0.078 0.953 0.078 0.672 0 1.328-0.172-1.75-0.359-2.898-1.742t-1.148-3.211v-0.063q1.062 0.594 2.281 0.641-1.031-0.688-1.641-1.797t-0.609-2.406q0-1.375 0.688-2.547 1.891 2.328 4.602 3.727t5.805 1.555q-0.125-0.594-0.125-1.156 0-2.094 1.477-3.57t3.57-1.477q2.188 0 3.687 1.594 1.703-0.328 3.203-1.219-0.578 1.797-2.219 2.781 1.453-0.156 2.906-0.781z"></path>
+
+			<path id="icon-github", d="M10 19q0 0.625-0.195 1.281t-0.672 1.188-1.133 0.531-1.133-0.531-0.672-1.188-0.195-1.281 0.195-1.281 0.672-1.188 1.133-0.531 1.133 0.531 0.672 1.188 0.195 1.281zM20 19q0 0.625-0.195 1.281t-0.672 1.188-1.133 0.531-1.133-0.531-0.672-1.188-0.195-1.281 0.195-1.281 0.672-1.188 1.133-0.531 1.133 0.531 0.672 1.188 0.195 1.281zM22.5 19q0-1.875-1.078-3.187t-2.922-1.313q-0.641 0-3.047 0.328-1.109 0.172-2.453 0.172t-2.453-0.172q-2.375-0.328-3.047-0.328-1.844 0-2.922 1.313t-1.078 3.187q0 1.375 0.5 2.398t1.266 1.609 1.906 0.938 2.188 0.461 2.328 0.109h2.625q1.281 0 2.328-0.109t2.188-0.461 1.906-0.938 1.266-1.609 0.5-2.398zM26 16.25q0 3.234-0.953 5.172-0.594 1.203-1.648 2.078t-2.203 1.344-2.656 0.742-2.68 0.344-2.609 0.070q-1.219 0-2.219-0.047t-2.305-0.195-2.383-0.469-2.141-0.805-1.891-1.266-1.344-1.797q-0.969-1.922-0.969-5.172 0-3.703 2.125-6.188-0.422-1.281-0.422-2.656 0-1.813 0.797-3.406 1.687 0 2.969 0.617t2.953 1.93q2.297-0.547 4.828-0.547 2.312 0 4.375 0.5 1.641-1.281 2.922-1.891t2.953-0.609q0.797 1.594 0.797 3.406 0 1.359-0.422 2.625 2.125 2.5 2.125 6.219z"></path>
+
+	</defs>
+</svg>
+  
    <header>
        <div class="container">
+         
+           <h1 class="logo"><a href="https://twitter.com/waqarHocain"> Waqar<span>Hocain</span> </a></h1>
           
-           <nav class="navbar">
-               <div class="navbar-header">
-                   <a href="/" class="navbar-brand logo">Waqar <small>Hocain</small></a>
-               </div>
-               <ul class="nav nav-pills navbar-right">
+          
+           <nav role="navigation">
+               <ul>
                    <li ng-class="{current:selected === 'about'}"><a href="" ng-click="select('about')">About</a></li>
                    <li ng-class="{current:selected === 'work'}"><a href="" ng-click="select('work')">Work</a></li>
                    <li ng-class="{current:selected === 'contact'}"><a href="" ng-click="select('contact')">Contact</a></li>
@@ -34,22 +47,56 @@
    
    <main>
       
-       <section class="about flex jumbotron" ng-show="selected === 'about'">
+       <section class="about flex" ng-show="selected === 'about'">
            <div class="container">
               
-               <h1 class="text-center">I'm <a href="https://twitter.com/waqarHocain" target="_blank">Waqar Hocain</a> &amp; I create <a href="" ng-click="select('work')">websites</a> / <a href="" ng-click="select('work')">apps</a>.</h1>
+               <h2>I'm <a href="https://twitter.com/waqarHocain" target="_blank">Waqar Hocain</a> &amp; I create <a href="" ng-click="select('work')">websites</a> / <a href="" ng-click="select('work')">apps</a>.</h2>
+               
                <ul class="social">
-                   <li><a href="http://codepen.io/waqarHocain/" target="_blank"><i class="fa fa-codepen"></i></a></li>
-                   <li><a href="https://twitter.com/waqarHocain" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                   <li><a href="https://www.facebook.com/waqar.mastan" target="_blank"><i class="fa fa-facebook"></i></a></li>
-               </ul>
-           </div>
-       </section>
+                   
+                    <li>
+                       <a href="https://codepen.io/waqarHocain" target="_blank">
+                           <svg class="icon" viewBox="0 0 28 28">
+								<use xlink:href="#icon-codepen"></use>
+							</svg>
+                       </a>
+                    </li>
+                      
+                    <li>
+                       <a href="https://www.facebook.com/waqar.mastan" target="_blank">
+                           <svg class="icon" viewBox="0 0 26 28">
+								<use xlink:href="#icon-facebook"></use>
+							</svg>
+                       </a>
+                   </li>
+                   
+                   <li>
+                       <a href="https://twitter.com/waqarHocain" target="_blank">
+                           <svg class="icon" viewBox="0 0 26 28">
+								<use xlink:href="#icon-twitter"></use>
+							</svg>
+                       </a>
+                    </li>
+                    
+                    
+                   <li>
+                       <a href="https://github.com/waqarHocain" target="_blank">
+							<svg class="icon" viewBox="0 0 26 28">
+								<use xlink:href="#icon-github"></use>
+							</svg>
+				       </a>
+                   </li>
+               </ul> <!-- // social -->
+           </div> <!-- // container -->
+       </section> <!-- // about -->
        
-       <section class="work jumbotron" ng-show="selected === 'work'">
+       <section class="work" ng-show="selected === 'work'">
            <div class="container relative">
-               <a href="" class="back btn btn-primary" ng-click="select('about')">BACK</a>
-               <p>These are some of the websites/apps, I've created || I'm working on.</p>
+              
+               <a href="" class="back" ng-click="select('about')">BACK</a>
+               
+               <p class="entry">These are some of the websites/apps, I've created || I'm working on.</p>
+               
                <ul class="showcase">
                    <li>
                        <h3><a href="http://codepen.io/waqarHocain/full/OVEVVO/" target="_blank">Simply Weather</a></h3>
@@ -77,54 +124,34 @@
                    </li>
                </ul>
            </div>
-       </section>
+       </section> <!-- // work -->
        
-       <section class="contact jumbotron" ng-show="selected === 'contact'">
+       <section class="contact" ng-show="selected === 'contact'">
            <div class="container relative">
-              <a href="" class="back btn btn-primary" ng-click="select('about')">BACK</a>
+              <a href="" class="back" ng-click="select('about')">BACK</a>
               
-<!--
-               <form action="" role="form">
-                  <div class="form-group">
-                     <label for="name">Name</label>
-                     <input type="text" class="form-control" id="name" placeholder="Your Name">
-                  </div>
-                  
-                  <div class="form-group">
-                         <label for="email">Email</label>
-                         <input type="email" class="form-control" id="email" placeholder="Your Email">
-                  </div>
-                  
-                  <div class="form-group">
-                       <label for="message">Message</label>
-                       <textarea name="" class="form-control" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
-                  </div>
-                   
-                   <button type="submit" class="btn btn-default submit">Submit</button>
-               </form>
--->
             <div id="wufoo-z17v49qz177py9q">
-            Fill out my <a href="https://waqarhocain.wufoo.com/forms/z17v49qz177py9q">online form</a>.
-            </div>
-            <script type="text/javascript">var z17v49qz177py9q;(function(d, t) {
-            var s = d.createElement(t), options = {
-            'userName':'waqarhocain',
-            'formHash':'z17v49qz177py9q',
-            'autoResize':true,
-            'height':'500',
-            'async':true,
-            'host':'wufoo.com',
-            'header':'show',
-            'ssl':true};
-            s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
-            s.onload = s.onreadystatechange = function() {
-            var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
-            try { z17v49qz177py9q = new WufooForm();z17v49qz177py9q.initialize(options);z17v49qz177py9q.display(); } catch (e) {}};
-            var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
-            })(document, 'script');</script>
+                Fill out my <a href="https://waqarhocain.wufoo.com/forms/z17v49qz177py9q">online form</a>.
+                </div>
+                <script type="text/javascript">var z17v49qz177py9q;(function(d, t) {
+                var s = d.createElement(t), options = {
+                'userName':'waqarhocain',
+                'formHash':'z17v49qz177py9q',
+                'autoResize':true,
+                'height':'500',
+                'async':true,
+                'host':'wufoo.com',
+                'header':'show',
+                'ssl':true};
+                s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+                s.onload = s.onreadystatechange = function() {
+                var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+                try { z17v49qz177py9q = new WufooForm();z17v49qz177py9q.initialize(options);z17v49qz177py9q.display(); } catch (e) {}};
+                var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+                })(document, 'script');</script>
 
            </div>
-       </section>
+       </section> <!-- // contact -->
        
    </main>
    
