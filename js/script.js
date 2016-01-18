@@ -1,4 +1,6 @@
-console.log("Loaded...!");
+(function() {
+
+console.log("Loaded...");
 
 var app = angular.module("portfolio", []);
 
@@ -9,3 +11,5 @@ app.controller("portfolioController", ["$scope", function($scope) {
       $scope.selected = val;  
     };
 }]);
+
+}());
