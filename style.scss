@@ -1,7 +1,7 @@
 // Colors
 $black:     #000;
 $white:     #fff;
-$dark:      #1f1f1f;
+$dark:      #3e3e3e;
 $gray:      #9e9ea6;
 $l-gray:    #eee;
 $light:     #f9f9f9;  
@@ -42,29 +42,29 @@ $blue:      #439fe0;
 	width: 26px;
 	height: 28px;
 }
-.back {
-    position: absolute;
-    top: -40px;
-    right: 40px;
-    font-weight: bold;
-    color: $white;
-    background: $blue;
-    text-decoration: none;
-    padding: 0.625em 0.9375em;
-    border-radius: 22px 5px 22px;
+// .back {
+//     position: absolute;
+//     top: -40px;
+//     right: 40px;
+//     font-weight: bold;
+//     color: $white;
+//     background: $blue;
+//     text-decoration: none;
+//     padding: 0.625em 0.9375em;
+//     border-radius: 22px 5px 22px;
     
-    @media screen and (max-width: 767px) {
-        top: -60px;
-        right: 10px;
-    }
+//     @media screen and (max-width: 767px) {
+//         top: -60px;
+//         right: 10px;
+//     }
     
-    &:hover, &:focus {
-        background-color: $blue;
-        color: $white;
-        border-radius: 5px 22px 5px;
-    }
-}
-.work, .contact {
+//     &:hover, &:focus {
+//         background-color: $blue;
+//         color: $white;
+//         border-radius: 5px 22px 5px;
+//     }
+// }
+#work, #contact {
     padding: 60px 0;
 }
 .current {
@@ -79,6 +79,9 @@ $blue:      #439fe0;
     }
 }
 
+.hidden {
+    display: none;
+}
 
 // Styles
 html, body, ul {
@@ -88,7 +91,7 @@ html, body, ul {
 body {
     background: $light;
     color: $dark;
-    font: 1em "Open Sans", Helvetica, Arial, sans-serif;
+    font: 1em "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 }
 a {
     color: $gray;
@@ -112,6 +115,8 @@ header {
     .logo {
         float: left;
         line-height: 1;
+        margin-bottom: 10px;
+        font-weight: bold;
 
         @media screen and (max-width: 767px) {
             float: none;
@@ -129,7 +134,6 @@ header {
         
         span {
             font-weight: lighter;
-            font-size: 0.7em;
         }
     }// logo 
     
@@ -199,9 +203,9 @@ header {
 
 
 // about section ---------------------------------
-.about {
+#about {
     h2 {
-        font-size: 42px;
+        font-size: 36px;
         font-weight: 400;
     }
 }
@@ -232,13 +236,13 @@ header {
 
 // work section ---------------------------------
 
-.work {
+#work {
     @media screen and (min-width: 767px) {
         padding-top: 80px;
     }
     
     .entry { 
-        font-size: 1.1em;
+        font-size: 1.2em;
         
         @media screen and (max-width: 767px) {
             text-align: center;
